@@ -1,77 +1,207 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Projects | Yuvaraj G</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<!-- ===== NAVBAR ===== -->
-<nav>
-    <div class="nav-container">
-        <h2>Yuvaraj G</h2>
-        <div>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="skills.html">Skills</a>
-            <a href="project.html" class="active">Projects</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </div>
-</nav>
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(180deg, #020617, #0f172a);
+    color: #e5e7eb;
+}
 
-<!-- ===== PROJECTS SECTION ===== -->
-<section class="section">
-    <h2 class="section-title">My <span>Projects</span></h2>
+/* Navbar */
+nav {
+    background: #020617;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-    <div class="card-container">
+nav .nav-container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        <!-- Project 1 -->
-        <div class="card">
-            <small>Java Desktop Application</small>
-            <h3>Pet Shop Management System</h3>
+nav h2 {
+    color: #e5e7eb;
+}
 
-            <p>
-                A Java Swing–based desktop application designed to manage pet shop
-                operations efficiently. It includes admin login, pet inventory
-                management, purchase processing, analytics, and receipt generation.
-            </p>
+nav a {
+    color: #cbd5f5;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
 
-            <p>
-                <strong>Technologies:</strong> Java, Swing, OOP, File Handling
-            </p>
+nav a:hover,
+nav a.active {
+    color: #d946ef;
+}
 
-            <a href="https://github.com/yuvaraj0109/PET-SHOP-MANAGEMENT"
-               target="_blank" class="code">
-                View Source Code
-            </a>
-        </div>
+/* Sections */
+.section {
+    width: 85%;
+    margin: auto;
+    padding: 70px 0;
+}
 
-        <!-- Project 2 -->
-        <div class="card">
-            <small>Web Application</small>
-            <h3>Student Management System</h3>
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
 
-            <p>
-                A CRUD-based web application developed using Java and Spring Boot
-                to manage student records with database integration.
-            </p>
+.section-title span {
+    color: #d946ef;
+}
 
-            <p>
-                <strong>Technologies:</strong> Java, Spring Boot, MySQL
-            </p>
+/* Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
 
-            <small>Status: In Progress</small>
-        </div>
+.hero-text h1 {
+    font-size: 44px;
+    margin-bottom: 10px;
+}
 
-    </div>
-</section>
+.hero-text h1 span {
+    color: #d946ef;
+}
 
-<!-- ===== FOOTER ===== -->
-<footer>
-    © 2025 Yuvaraj G | Java Full Stack Developer
-</footer>
+.hero-text p {
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
 
-</body>
-</html>
+.hero-buttons a {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #a855f7, #ec4899);
+    color: #020617;
+}
+
+.btn-outline {
+    border: 2px solid #d946ef;
+    color: #e5e7eb;
+}
+
+/* Profile Image */
+.hero-img img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: 4px solid #d946ef;
+}
+
+/* Cards */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #020617;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #1e293b;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #e5e7eb;
+}
+
+.card small {
+    color: #d946ef;
+}
+
+.card p {
+    margin-top: 10px;
+    color: #94a3b8;
+}
+
+/* Buttons in cards */
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.card .live {
+    background: linear-gradient(90deg, #a855f7, #ec4899);
+    color: #020617;
+}
+
+.card .code {
+    border: 1px solid #d946ef;
+    color: #e5e7eb;
+    margin-left: 10px;
+}
+
+/* Contact form */
+form {
+    max-width: 420px;
+    margin: auto;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    background: #020617;
+    color: #e5e7eb;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(90deg, #a855f7, #ec4899);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #94a3b8;
+    border-top: 1px solid #1e293b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-img img {
+        width: 200px;
+        height: 200px;
+    }
+}"this is our .css
