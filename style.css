@@ -1,20 +1,18 @@
-i want home page like this
-
-give
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ================= GLOBAL ================= */
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     background: linear-gradient(180deg, #020617, #0f172a);
     color: #e5e7eb;
+    scroll-behavior: smooth;
 }
 
-/* Navbar */
+/* ================= NAVBAR ================= */
 nav {
     background: #020617;
     padding: 15px 0;
@@ -40,6 +38,8 @@ nav a {
     text-decoration: none;
     margin-left: 20px;
     font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
 nav a:hover,
@@ -47,7 +47,23 @@ nav a.active {
     color: #d946ef;
 }
 
-/* Sections */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #d946ef;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+/* ================= SECTIONS ================= */
 .section {
     width: 85%;
     margin: auto;
@@ -64,7 +80,7 @@ nav a.active {
     color: #d946ef;
 }
 
-/* Hero */
+/* ================= HERO ================= */
 .hero {
     display: flex;
     align-items: center;
@@ -75,6 +91,7 @@ nav a.active {
 .hero-text h1 {
     font-size: 44px;
     margin-bottom: 10px;
+    animation: fadeSlide 1s ease forwards;
 }
 
 .hero-text h1 span {
@@ -84,8 +101,10 @@ nav a.active {
 .hero-text p {
     color: #94a3b8;
     margin-bottom: 20px;
+    animation: fadeSlide 1.2s ease forwards;
 }
 
+/* ================= HERO BUTTONS ================= */
 .hero-buttons a {
     display: inline-block;
     margin-right: 15px;
@@ -93,6 +112,12 @@ nav a.active {
     border-radius: 8px;
     font-weight: bold;
     text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-buttons a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(217, 70, 239, 0.45);
 }
 
 .btn-primary {
@@ -105,15 +130,35 @@ nav a.active {
     color: #e5e7eb;
 }
 
-/* Profile Image */
+/* ================= PROFILE IMAGE ================= */
 .hero-img img {
     width: 260px;
     height: 260px;
     border-radius: 50%;
     border: 4px solid #d946ef;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: float 4s ease-in-out infinite;
 }
 
-/* Cards */
+.hero-img img:hover {
+    transform: scale(1.08) rotate(2deg);
+    box-shadow: 0 0 45px rgba(217, 70, 239, 0.7);
+}
+
+/* Floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* ================= CARDS ================= */
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -125,6 +170,12 @@ nav a.active {
     padding: 25px;
     border-radius: 14px;
     border: 1px solid #1e293b;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
 }
 
 .card h3 {
@@ -141,7 +192,7 @@ nav a.active {
     color: #94a3b8;
 }
 
-/* Buttons in cards */
+/* ================= CARD BUTTONS ================= */
 .card a {
     display: inline-block;
     margin-top: 15px;
@@ -149,6 +200,12 @@ nav a.active {
     border-radius: 6px;
     text-decoration: none;
     font-size: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(217, 70, 239, 0.35);
 }
 
 .card .live {
@@ -162,7 +219,7 @@ nav a.active {
     margin-left: 10px;
 }
 
-/* Contact form */
+/* ================= CONTACT FORM ================= */
 form {
     max-width: 420px;
     margin: auto;
@@ -187,9 +244,15 @@ form button {
     background: linear-gradient(90deg, #a855f7, #ec4899);
     font-weight: bold;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Footer */
+form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(217, 70, 239, 0.5);
+}
+
+/* ================= FOOTER ================= */
 footer {
     text-align: center;
     padding: 20px;
@@ -197,7 +260,19 @@ footer {
     border-top: 1px solid #1e293b;
 }
 
-/* Responsive */
+/* ================= ANIMATIONS ================= */
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
@@ -208,4 +283,4 @@ footer {
         width: 200px;
         height: 200px;
     }
-}"this is our .css
+}
