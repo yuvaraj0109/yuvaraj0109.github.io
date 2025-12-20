@@ -7,68 +7,111 @@
 </head>
 <body>
 
-<!-- ===== Navbar ===== -->
-<header class="navbar">
-    <h2>Yuvaraj G</h2>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="project.html" class="active">Projects</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+<!-- ===== NAVBAR (MATCHES YOUR CSS) ===== -->
+<nav>
+    <div class="nav-container">
+        <h2>Yuvaraj G</h2>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="project.html" class="active">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</nav>
 
-<!-- ===== Projects Section ===== -->
+<!-- ===== PROJECTS SECTION ===== -->
 <section class="section">
-    <h1 class="section-title">Featured <span>Projects</span></h1>
+    <h2 class="section-title">Featured <span>Projects</span></h2>
 
-    <div class="project-container">
+    <div class="card-container">
 
-        <!-- Project 1 -->
-        <div class="project-card">
-            <h3>Pet Shop Management System</h3>
-            <p class="tech">Java • Swing • OOP • File Handling</p>
+        <!-- ================= Job Board Project ================= -->
+        <div class="card">
+            <h3>Job Board Application</h3>
+            <small>Java • Spring Boot • Thymeleaf • Spring Security • MySQL</small>
 
             <p>
-                A desktop-based Java Swing application for managing a pet shop.
-                Includes secure admin login, pet inventory management, purchase
-                processing, analytics dashboard, and receipt generation.
+                A full-stack Job Board web application that allows employers
+                to post jobs and job seekers to apply securely. Built using
+                Spring Boot with role-based authentication and MVC architecture.
             </p>
 
-            <ul>
-                <li>Admin login authentication</li>
-                <li>Add, update, and manage pets</li>
-                <li>Purchase history & analytics</li>
-                <li>Receipt generation and printing</li>
-                <li>File-based data storage</li>
-            </ul>
+            <p>
+                <b>Key Features:</b><br>
+                ✔ User Registration & Login<br>
+                ✔ Role-based access (Employer & Job Seeker)<br>
+                ✔ Post & manage job listings<br>
+                ✔ Apply for jobs and track application status<br>
+                ✔ Spring Security authentication & authorization<br>
+                ✔ MySQL database integration
+            </p>
 
-            <div class="btn-group">
-                <a href="https://github.com/yuvaraj0109/PET-SHOP-MANAGEMENT" target="_blank" class="btn">Source Code</a>
+            <!-- Screenshots -->
+            <div style="margin-top:15px;">
+                <img src="images/jobboard-register.png" width="100%" style="border-radius:8px;">
+                <img src="images/jobboard-login.png" width="100%" style="margin-top:10px; border-radius:8px;">
+                <img src="images/jobboard-jobs.png" width="100%" style="margin-top:10px; border-radius:8px;">
+                <img src="images/jobboard-applications.png" width="100%" style="margin-top:10px; border-radius:8px;">
             </div>
+
+            <a href="https://github.com/yuvaraj0109/Job_Board_Application"
+               target="_blank"
+               class="code">
+                Source Code
+            </a>
+
+            <span class="live" style="margin-left:10px;">
+                Working Demo (Local)
+            </span>
         </div>
 
-        <!-- Project 2 (Optional placeholder) -->
-        <div class="project-card">
+        <!-- ================= Pet Shop Project ================= -->
+        <div class="card">
+            <h3>Pet Shop Management System</h3>
+            <small>Java • Swing • OOP • File Handling</small>
+
+            <p>
+                A desktop-based Java Swing application for managing a pet shop,
+                featuring inventory control, billing, and admin authentication.
+            </p>
+
+            <p>
+                <b>Key Features:</b><br>
+                ✔ Admin login authentication<br>
+                ✔ Add, update, and manage pets<br>
+                ✔ Purchase history tracking<br>
+                ✔ Receipt generation and printing<br>
+                ✔ File-based data storage
+            </p>
+
+            <a href="https://github.com/yuvaraj0109/PET-SHOP-MANAGEMENT"
+               target="_blank"
+               class="code">
+                Source Code
+            </a>
+        </div>
+
+        <!-- ================= Student Management ================= -->
+        <div class="card">
             <h3>Student Management System</h3>
-            <p class="tech">Java • Spring Boot • MySQL</p>
+            <small>Java • Spring Boot • MySQL</small>
 
             <p>
                 CRUD-based web application to manage student records with
                 backend validation and database integration.
             </p>
 
-            <div class="btn-group">
-                <span class="btn disabled">In Progress</span>
-            </div>
+            <span class="code">In Progress</span>
         </div>
 
     </div>
 </section>
 
-<footer class="footer">
-    <p>© 2025 Yuvaraj G | Java Full Stack Developer</p>
+<!-- ===== FOOTER ===== -->
+<footer>
+    © 2025 Yuvaraj G | Java Full Stack Developer
 </footer>
 
 </body>
